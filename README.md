@@ -23,6 +23,12 @@ I couldn't concentrate well staring at a wall of text, so I found a nugget of co
 ###Train Model
 The first part is to pre-process the data before training the model. In this case, I take out special characters and punctuation. I also replace all links with "urlextracted". The idea behind this is that nearly all tweets with links in them are "junk", that is, news articles about food poisoning, not specific instances of an illness. So, by treating all of those links the same, the model should associate "urlextracted" with junk fairly well. Then save the trained model as a file.
 
+##R Packages
+[textcat] (http://cran.r-project.org/web/packages/textcat/index.html)
+[stringr] (http://cran.r-project.org/web/packages/stringr/index.html)
+[RMongo] (http://cran.r-project.org/web/packages/RMongo/index.html)
+[FastRWeb] (http://www.rforge.net/FastRWeb/)
+
 ## Copyright
 
 Copyright (c) 2013 Cory Nissen. Released under the MIT License.
