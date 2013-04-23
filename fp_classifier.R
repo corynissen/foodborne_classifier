@@ -3,7 +3,6 @@ run <- function(text){
   load("/var/FastRWeb/web.R/rdata/fp_model.Rdata")
 
   text.cleansed <- tolower(text)
-  #text.cleansed <- iconv(text.cleansed, "latin1", "ASCII", sub="")
   # remove the string "food poisoning" because every tweet has this in it...
   text.cleansed <- gsub("food poisoning", "", text.cleansed)
   text.cleansed <- replace.links(text.cleansed)
