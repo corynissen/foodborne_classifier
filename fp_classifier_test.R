@@ -1,7 +1,7 @@
 
 run <- function(text){
   load("/var/FastRWeb/web.R/rdata/fp_model_test.Rdata")
-  text.cleansed <- text.cleansed <- remove.word(text, "@")
+  text.cleansed <- text.cleansed <- replace.links(text)
   text.cleansed <- clean.text(text.cleansed)
   result <- textcat(text.cleansed, fp.model)
   
