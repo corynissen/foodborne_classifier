@@ -1,8 +1,7 @@
 
 run <- function(text){
   load("/var/FastRWeb/web.R/rdata/fp_model_test.Rdata")
-  text.cleansed <- text.cleansed <- replace.links(text)
-  text.cleansed <- clean.text(text.cleansed)
+  text.cleansed <- clean.text(text, replace.links, remove.word)
   result <- textcat(text.cleansed, fp.model)
   
   if(is.na(result)){
