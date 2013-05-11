@@ -1,9 +1,13 @@
 
 run <- function(text){
   load("/var/FastRWeb/web.R/rdata/fp_model.Rdata")
-  text.cleansed <- clean.text(text)
-  result <- textcat(text.cleansed, fp.model)
-  
+  # if it starts with RT or has " RT @" in it, it's junk to Raed
+  if(grepl("^RT| RT @", text)){
+    result <- 0
+  }else{    
+    text.cleansed <- clean.text(text)
+    result <- textcat(text.cleansed, fp.model)
+  }  
   if(is.na(result)){
     result.print <- "don't know..."
   }else{
