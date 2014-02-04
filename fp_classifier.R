@@ -1,3 +1,5 @@
+library(textcat)
+library(stringr)
 
 run <- function(text){
   load("/var/FastRWeb/web.R/rdata/fp_model.Rdata")
