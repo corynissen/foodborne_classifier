@@ -3,7 +3,7 @@
 The classifier used in the http://foodborne.smartchicagoapps.org/ application.
 
 ## Prediction
-The prediction is done via a webservice running on an EC2 instance running ubuntu, R, apache, and the [FastRWeb package] (http://www.rforge.net/FastRWeb/) to pull it all together.
+The prediction is done via a webservice running on an EC2 instance running ubuntu, R, apache, and the [FastRWeb package](http://www.rforge.net/FastRWeb/) to pull it all together.
 
 ### How it's Served
 The FastRWeb package takes a .R file (fp_classifier.R in my case) with a "run" function and makes it available via the web. I use this to submit text and return a classification... <http://174.129.49.183/cgi-bin/R/fp_classifier?text=I%20ate%20some%20bad%20food%20at%20lunch%20and%20think%20I%20have%20food%20poisoning>
